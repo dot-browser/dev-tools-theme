@@ -1,0 +1,340 @@
+html {
+  -webkit-animation: 0.4s ease fade;
+  animation: 0.4s ease fade;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1 !important;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1 !important;
+  }
+}
+
+:root {
+  --background: #fdfdfd;
+  --darkerBg: #fdfdfd;
+  --lighterBg: #fdfdfd;
+  --foreground: #292929;
+  --primary: #fdfdfd;
+  --selBg: #0f0f0f;
+  --selBgAlpha: #546e7a70;
+  --selFg: #0f0f0f;
+  --button: #2e3c43;
+  --second: #32424a;
+  --disabled: #415967;
+  --contrast: #1e272c;
+  --active: #314549;
+  --border: #dbdbdb;
+  --highlight: #c2c2c2;
+  --tree: #546e7a70;
+  --notif: #1e272c;
+  --accent1: #292929;
+  --accentAlpha: #292929e1;
+  --excluded: #2e3c43;
+  --excludedAlpha: #2e3c4340;
+  --accent2: #80cbc4;
+  --accent2Alpha: #80cbc480;
+  --accent3: #ff4081;
+  --tag-name-color: #f07178;
+  --attribute-name-color: #ffcb6b;
+  --comment-color: #546e7a;
+  --keyword-color: #c792ea;
+  --error-color: #ff5370;
+  --var-color: #eeffff;
+  --operator-color: #89ddff;
+  --function-color: #82aaff;
+  --string-color: #c3e88d;
+  --number-color: #f78c6c;
+  --link-color: #80cbc4;
+  --text-color: #c3cee3;
+  --ignored-color: #ab79c7;
+  --parameters-color: #f78c6c;
+  --hoverColor: #0000000f;
+}
+html,
+:host-context(html) {
+  font-family: Roboto;
+  font-weight: 400;
+  --accent-color: var(--accent1) !important;
+  --accent-fg-color: var(--accent1) !important;
+  --accent-color-hover: var(--accentAlpha) !important;
+  --toolbar-bg-color: var(--darkerBg) !important;
+  --toolbar-hover-bg-color: var(--highlight) !important;
+  --selection-fg-color: var(--selFg) !important;
+  --selection-bg-color: var(--selBg) !important;
+  --selection-inactive-fg-color: var(--foreground) !important;
+  --selection-inactive-bg-color: var(--lighterBg) !important;
+  --tab-selected-fg-color: var(--selFg) !important;
+  --tab-selected-bg-color: var(--highlight) !important;
+  --drop-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23), 0 2px 4px 2px rgba(0, 0, 0, 0.2),
+    0 2px 6px 2px rgba(0, 0, 0, 0.1) !important;
+  --divider-color: var(--border) !important;
+  --divider-border: 1px solid var(--border) !important;
+  --focus-bg-color: var(--active) !important;
+  --focus-ring-active-shadow: 0 0 0 1px var(--accent1) !important;
+  --focus-ring-inactive-shadow: 0 0 0 1px var(--active) !important;
+  --editor-selection-bg-color: var(--selBg) !important;
+  --editor-selection-inactive-bg-color: var(--selBgAlpha) !important;
+  --message-border-color: var(--border) !important;
+}
+html .tree-outline li.property,
+:host-context(html) .tree-outline li.property {
+  color: var(--attribute-name-color);
+}
+html .ax-name,
+:host-context(html) .ax-name {
+  color: var(--var-color);
+}
+html .ax-value-string,
+:host-context(html) .ax-value-string {
+  color: var(--string-color);
+}
+html .ax-breadcrumbs .ax-node::before,
+:host-context(html) .ax-breadcrumbs .ax-node::before {
+  background-color: var(--foreground);
+}
+html .ax-breadcrumbs .ax-node::before:hover,
+:host-context(html) .ax-breadcrumbs .ax-node::before:hover {
+  background-color: var(--accent1);
+}
+html .ax-breadcrumbs .ax-node.hovered:not(.inspected) .selection,
+html .ax-breadcrumbs .ax-node.preselected:not(.inspected) .selection,
+:host-context(html) .ax-breadcrumbs .ax-node.hovered:not(.inspected) .selection,
+:host-context(html)
+  .ax-breadcrumbs
+  .ax-node.preselected:not(.inspected)
+  .selection {
+  background-color: var(--tree);
+}
+html .ax-breadcrumbs .ax-node.preselected:not(.inspected):focus .selection,
+:host-context(html)
+  .ax-breadcrumbs
+  .ax-node.preselected:not(.inspected):focus
+  .selection {
+  border-top-color: var(--tree);
+  border-right-color: var(--tree);
+  border-bottom-color: var(--tree);
+  border-left-color: var(--tree);
+}
+html .ax-breadcrumbs .ax-node.inspected .selection,
+:host-context(html) .ax-breadcrumbs .ax-node.inspected .selection {
+  background-color: var(--highlight);
+}
+html .ax-breadcrumbs .ax-node.inspected:focus .selection,
+:host-context(html) .ax-breadcrumbs .ax-node.inspected:focus .selection {
+  background-color: var(--selBg);
+}
+html .ax-breadcrumbs .ax-node.parent.inspected:focus::before,
+:host-context(html) .ax-breadcrumbs .ax-node.parent.inspected:focus::before {
+  background-color: var(--highlight);
+}
+html .ax-breadcrumbs .ax-node.inspected:focus,
+:host-context(html) .ax-breadcrumbs .ax-node.inspected:focus {
+  color: var(--selFg);
+}
+html .ax-breadcrumbs .ax-readable-string,
+:host-context(html) .ax-breadcrumbs .ax-readable-string {
+  color: var(--string-color);
+}
+html .ax-breadcrumbs .ax-internal-role,
+:host-context(html) .ax-breadcrumbs .ax-internal-role {
+  color: var(--number-color);
+}
+html .animation-node-row,
+:host-context(html) .animation-node-row {
+  border-bottom-color: var(--border);
+}
+html .animation-node-description,
+:host-context(html) .animation-node-description {
+  border-bottom-color: var(--active);
+  background-color: var(--background);
+}
+html circle.animation-keyframe-point,
+:host-context(html) circle.animation-keyframe-point {
+  fill: var(--foreground);
+}
+html .animation-name,
+:host-context(html) .animation-name {
+  color: var(--foreground);
+}
+html .animation-timeline-toolbar-container,
+:host-context(html) .animation-timeline-toolbar-container {
+  background-color: var(--contrast);
+}
+html .animation-timeline-header,
+:host-context(html) .animation-timeline-header {
+  border-bottom-color: var(--active);
+}
+html .animation-timeline-header::after,
+:host-context(html) .animation-timeline-header::after {
+  background-color: var(--background);
+  border-right-color: var(--border);
+}
+html .animation-timeline-buffer,
+html .animation-timeline-buffer-hint,
+:host-context(html) .animation-timeline-buffer,
+:host-context(html) .animation-timeline-buffer-hint {
+  border-bottom-color: var(--border);
+}
+html .animation-time-overlay,
+:host-context(html) .animation-time-overlay {
+  background-color: #fff;
+}
+html .animation-scrubber,
+:host-context(html) .animation-scrubber {
+  border-left-color: var(--accent1);
+}
+html .animation-scrubber-line,
+:host-context(html) .animation-scrubber-line {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 5px,
+    var(--accent1) 5px,
+    var(--accent1) 6px,
+    rgba(255, 255, 255, 0) 6px
+  );
+}
+html .animation-scrubber-head,
+:host-context(html) .animation-scrubber-head {
+  background-color: var(--accent1);
+}
+html rect.animation-timeline-grid-line,
+:host-context(html) rect.animation-timeline-grid-line {
+  fill: var(--accent2);
+}
+html text.animation-timeline-grid-label,
+:host-context(html) text.animation-timeline-grid-label {
+  fill: var(--foreground);
+}
+html .animation-node-row.animation-node-selected,
+:host-context(html) .animation-node-row.animation-node-selected {
+  background-color: var(--tree);
+}
+html .animation-node-selected > .animation-node-description,
+:host-context(html) .animation-node-selected > .animation-node-description {
+  background-color: var(--selBg);
+}
+html .animation-buffer-preview,
+:host-context(html) .animation-buffer-preview {
+  background-color: var(--toolbar-bg-color);
+}
+html .animation-buffer-preview-animation,
+:host-context(html) .animation-buffer-preview-animation {
+  background-color: var(--second);
+  border-right-color: var(--active);
+}
+html .animation-buffer-preview:not(.selected):hover,
+:host-context(html) .animation-buffer-preview:not(.selected):hover {
+  background-color: var(--highlight);
+}
+html .animation-buffer-preview.selected,
+:host-context(html) .animation-buffer-preview.selected {
+  background-color: var(--selBg);
+}
+html .animation-paused,
+:host-context(html) .animation-paused {
+  background-color: rgba(var(--highlight), 0.5);
+}
+html .animation-paused::after,
+html .animation-paused::before,
+:host-context(html) .animation-paused::after,
+:host-context(html) .animation-paused::before {
+  background-color: var(--background);
+  border-top-color: var(--border);
+  border-right-color: var(--border);
+  border-bottom-color: var(--border);
+  border-left-color: var(--border);
+}
+html .animation-buffer-preview.selected > svg > line,
+:host-context(html) .animation-buffer-preview.selected > svg > line {
+  stroke: var(--selFg) !important;
+}
+html .animation-playback-rate-button,
+:host-context(html) .animation-playback-rate-button {
+  background-color: var(--background);
+  border-top-color: var(--button);
+  border-right-color: var(--button);
+  border-bottom-color: var(--button);
+  border-left-color: var(--button);
+  color: var(--primary);
+}
+html .animation-playback-rate-button:not(.selected):hover,
+:host-context(html) .animation-playback-rate-button:not(.selected):hover {
+  background-color: var(--highlight);
+}
+html .animation-playback-rate-button.selected,
+:host-context(html) .animation-playback-rate-button.selected {
+  color: var(--selFg);
+  background-color: var(--accent1);
+}
+html .animation-playback-rate-button.selected:first-child,
+:host-context(html) .animation-playback-rate-button.selected:first-child {
+  color: var(--selFg);
+  background-color: var(--accent1);
+}
+
+.tabbed-pane-header-tab {
+  transition: all 0.3s;
+}
+
+.tabbed-pane-header-tab,
+.tabbed-pane-header-tab.selected {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+.tabbed-pane-header-tab:hover {
+  border-radius: 50px;
+  background-color: var(--hoverColor) !important;
+  opacity: 0.6;
+}
+
+.tabbed-pane-header-tab.selected {
+  border-radius: 50px;
+  background-color: var(--hoverColor) !important;
+}
+
+.tooltip {
+  background: hsl(0, 0%, 18%) !important;
+  color: white !important;
+}
+
+.tooltip-shortcut {
+  opacity: 0.7;
+  color: white !important;
+}
+
+.console-toolbar-container > .toolbar {
+  border-bottom: 0.5px solid var(--divider-color) !important;
+}
+
+.primary-button {
+  transition: 0.3s all;
+}
+
+li[role="treeitem"].selected {
+  background-color: var(--divider-color) !important;
+  border-radius: 50px;
+  color: rgb(24, 24, 24) !important;
+}
+
+li[role="treeitem"].force-white-icons {
+  background-color: black !important;
+}
