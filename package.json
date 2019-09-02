@@ -1,0 +1,12 @@
+{
+  "name": "dot-dev-tools",
+  "version": "1.0.0",
+  "description": "Custom Chromium Dev Tools theme",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dot-browser/dev-tools-theme.git"
+  },
+  "author": "EnderDev",
+  "license": "MIT"
+}
