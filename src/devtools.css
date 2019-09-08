@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Product Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"),
+    url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
+      format("woff2");
+}
+
 html {
   -webkit-animation: 0.4s ease fade;
   animation: 0.4s ease fade;
@@ -456,4 +465,27 @@ li[role="treeitem"].selected {
 .platform-windows .source-code {
   font-size: 12px !important;
   font-family: Consolas, Lucida Console, Courier New, monospace !important;
+}
+
+.chrome-select {
+  border-radius: 50px !important;
+  padding-left: 13px !important;
+  padding-right: 17px !important;
+}
+
+.settings-tab-container {
+  margin-left: 20px;
+}
+
+.settings-tab-container header,
+.settings-window-title {
+  font-family: "Product Sans" !important;
+}
+
+.tabbed-pane-header-tabs {
+  padding: 10px;
+}
+
+.tabbed-pane-header-tab {
+  margin-bottom: 5px;
 }
