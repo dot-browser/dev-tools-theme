@@ -482,14 +482,6 @@ li[role="treeitem"].selected {
   font-family: "Product Sans" !important;
 }
 
-.tabbed-pane-header-tabs {
-  padding: 10px;
-}
-
-.tabbed-pane-header-tab {
-  margin-bottom: 5px;
-}
-
 .vbox {
   -webkit-animation: 0.1s ease fade;
   animation: 0.1s ease fade;
@@ -500,9 +492,12 @@ li[role="treeitem"].selected {
 }
 
 .release-note-container {
-  display: none;
+  display: none !important;
 }
 
 .release-note-image {
-  display: none;
+  display: none !important;
+}
+.release-note-top-section {
+  display: none !important;
 }
