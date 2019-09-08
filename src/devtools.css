@@ -489,3 +489,17 @@ li[role="treeitem"].selected {
 .tabbed-pane-header-tab {
   margin-bottom: 5px;
 }
+
+.vbox {
+  -webkit-animation: 0.4s ease fade;
+  animation: 0.4s ease fade;
+  background-color: #0000003b;
+}
+
+.widget[aria-modal="true"] {
+  transform: translate(-50%, -50%) !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 500px;
+  height: 512px;
+}
