@@ -33,7 +33,7 @@ html {
   --lighterBg: #fdfdfd;
   --foreground: #292929;
   --primary: #fdfdfd;
-  --selBg: #0f0f0f;
+  --selBg: #d3d3d3;
   --selBgAlpha: #546e7a70;
   --selFg: #0f0f0f;
   --button: #2e3c43;
@@ -407,6 +407,9 @@ li[role="treeitem"].selected {
 .widget {
   border-radius: 5px;
   background: white !important;
+}
+
+.style-panes-wrapper {
   left: 0 !important;
   width: 100% !important;
   padding-left: 0 !important;
