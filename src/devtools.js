@@ -3,4 +3,7 @@ fetch("devtools.css")
   .then(data => {
     chrome.devtools.panels.applyStyleSheet(data);
     console.log(chrome.devtools);
+    chrome.devtools.panels.setOpenResourceHandler(resource, () => {
+      console.log(resource);
+    });
   });
