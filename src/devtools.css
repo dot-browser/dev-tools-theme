@@ -491,15 +491,18 @@ li[role="treeitem"].selected {
 }
 
 .vbox {
-  -webkit-animation: 0.4s ease fade;
-  animation: 0.4s ease fade;
-  background-color: #0000003b;
+  -webkit-animation: 0.1s ease fade;
+  animation: 0.1s ease fade;
 }
 
-.widget[aria-modal="true"] {
-  transform: translate(-50%, -50%) !important;
-  left: 50% !important;
-  top: 50% !important;
-  width: 500px;
-  height: 512px;
+.soft-context-menu-item[aria-label="What's New"] {
+  display: none;
+}
+
+.release-note-container {
+  display: none;
+}
+
+.release-note-image {
+  display: none;
 }
