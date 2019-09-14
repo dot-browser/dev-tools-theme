@@ -3,6 +3,12 @@ fetch("devtools.css")
   .then(data => {
     chrome.devtools.panels.applyStyleSheet(data);
 
+    // chrome.devtools.panels.setOpenResourceHandler(rh => {
+    //   console.log(rh);
+    // });
+
+    // chrome.runtime.connectNative("com.dot.browser");
+
     var style = document.createElement("style");
 
     style.setAttribute("src", "devtools.css");

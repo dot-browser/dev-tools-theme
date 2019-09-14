@@ -358,7 +358,7 @@ select:hover {
 
 optgroup,
 optgroup:hover {
-  background-color: none !important;
+  background-color: white !important;
 }
 
 select:active {
@@ -451,9 +451,9 @@ li[role="treeitem"].selected {
   --spritesheet-position: -193px 144px !important;
 }
 
-.dialog-close-button {
+/* .dialog-close-button {
   display: none;
-}
+} */
 
 .toolbar-divider {
   background-color: none !important;
@@ -524,6 +524,7 @@ li[role="treeitem"].selected {
   padding: 6px 8px !important;
   border-radius: 4px;
   margin-left: 10px;
+  animation: 0.1s slidein;
 }
 .soft-context-menu-item {
   padding: 4px 7px 4px 8px !important;
@@ -537,12 +538,19 @@ li[role="treeitem"].selected {
 
 .toolbar-button {
   transition: all 0.3s;
-  border-radius: 3px;
+  border-radius: 3px !important;
   transform: scale(0.8);
 }
 
 .toolbar-button:hover {
   background-color: #80808033;
+  border-radius: 3px !important;
+}
+
+.smallicon-checkmark {
+  --spritesheet-position: -56px 165px !important;
+  background-size: 200px !important;
+  background-image: url(Images/largeIcons.svg) !important;
 }
 
 :host-context(.platform-windows) .monospace,
@@ -819,7 +827,17 @@ input[type="checkbox"]:checked + label:before:focus {
   background-color: #d9d9d9 !important;
 }
 
-.close-button {
+.toolbar {
+  background-color: #fff !important;
+}
+
+.toolbar-button.toolbar-state-on .toolbar-glyph,
+.toolbar-blue-on-hover
+  .toolbar-button:not(.toolbar-state-on):enabled:hover:not(:active) {
+  background-color: black !important;
+}
+
+/* .close-button {
 }
 
 .close-button[aria-label="Close"] {
@@ -860,7 +878,7 @@ input[type="checkbox"]:checked + label:before:focus {
 .close-button[aria-label="Close"]:hover {
   background-color: rgba(0, 0, 0, 0.082);
   transition: 0.2s background-color;
-}
+} */
 
 header > h1,
 .header {
